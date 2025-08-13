@@ -1,0 +1,25 @@
+
+
+class DonationSerializer(serializers.ModelSerializer):
+    donor_username = serializers.ReadOnlyField(source='donor.username')
+
+    class Meta:
+        model = Donation
+        fields = '__all__'
+
+
+
+class DonorDonationListCreate(generics.ListCreateAPIView):
+    serializer_class = DonationSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        return Donation.objects.filter(donor=self.request.user)
+
+    def perform_create(self, serializer):
+        serializer.save(donor=self.request.user)
+
+class NGODonationList(generics.ListAPIView):
+    queryset = Donation.objects.all()
+    serializer_class = DonationSerializer
+    permission_classes = [permissions.IsAuthenticated]

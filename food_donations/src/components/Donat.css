@@ -1,0 +1,225 @@
+/* Base Styles */
+.overview-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #2c3e50;
+  font-size: 2.2rem;
+}
+
+h3 {
+  color: #2f00ff;
+  margin-bottom: 1rem;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(rgba(0,0,0,0.6), url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b') no-repeat center center);
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 8rem 2rem;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Mission Section */
+.mission-content {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.mission-text {
+  flex: 1;
+}
+
+.mission-image {
+  flex: 1;
+}
+
+.mission-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.mission-text ul {
+  margin-top: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.mission-text li {
+  margin-bottom: 0.8rem;
+}
+
+/* How It Works */
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.step {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+}
+
+.step-icon {
+  font-size: 2.5rem;
+  color: #7700ff;
+  margin-bottom: 1rem;
+}
+
+/* styles.css */
+btn {
+  outline: none; /* Removes default outline */
+}
+
+/* Better alternative - Replace with custom focus style */
+btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5); /* Blue shadow example */
+}
+/* Services Section */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.service-card ul {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+}
+
+.service-card li {
+  margin-bottom: 0.6rem;
+}
+
+/* Testimonials */
+.testimonial-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.testimonial {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+  position: relative;
+}
+
+.testimonial:before {
+  content: '"';
+  font-size: 5rem;
+  color: #8327ae;
+  opacity: 0.2;
+  position: absolute;
+  top: -1rem;
+  left: 0.5rem;
+}
+
+.author {
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #7f8c8d;
+}
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+  background: rgb(203, 163, 255);
+  border-radius: 8px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.cta-button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cta-button.primary {
+  background: #001aff;
+  color: white;
+}
+
+.cta-button.secondary {
+  background: white;
+  color: #001aff;
+  border: 2px solid #001aff;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mission-content {
+    flex-direction: column;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}

@@ -1,0 +1,48 @@
+.app-header {
+  width: 100%;
+  padding: 1.5rem 0;
+  background-color: rgb(203, 163, 255);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  border-radius: 1rem;
+}
+
+.app-title {
+  font-size: 2.5rem;
+  font-family: 'Times New Roman', Times, serif;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.app-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  color: #333;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 251, 0, 0.541);
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .app-title {
+    font-size: 2rem;
+  }
+  
+  .app-nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
